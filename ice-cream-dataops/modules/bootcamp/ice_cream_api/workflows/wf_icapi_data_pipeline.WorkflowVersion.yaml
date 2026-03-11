@@ -11,8 +11,6 @@ workflowDefinition:
     retries: 3
     timeout: 3600
     onFailure: abortWorkflow
-
-
   - externalId: contextualize_ts_assets_task
     type: 'transformation'
     parameters:
@@ -24,7 +22,6 @@ workflowDefinition:
     onFailure: abortWorkflow
     dependsOn:
       - externalId: create_asset_hierarchy_task
-
   - externalId: icapi_datapoints_extractor_task
     type: function
     parameters:
